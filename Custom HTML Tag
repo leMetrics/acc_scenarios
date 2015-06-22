@@ -1,0 +1,19 @@
+<script>
+dataLayerGA.push({
+           'page.pageVersion': ({{Cookie ACC Scenario}}||'').split('#')[0]
+});
+
+window._gaq = window._gaq || [];
+
+ _gaq.push(['_setCustomVar',
+      5,
+      'Page Version',
+      ({{Cookie ACC Scenario}}||'').split('#')[0],
+      1
+]);
+
+if ({{Cookie ACC Scenario}}) {
+    _gaq.push(['_trackEvent', 'Page Version', ({{Cookie ACC Scenario}}||'').split('#')[0], 'larger_image'])
+};
+
+</script>
